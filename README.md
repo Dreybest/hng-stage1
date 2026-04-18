@@ -1,49 +1,47 @@
-# HNG Stage 1 DevOps Task – Personal API
+# HNG Stage 1 DevOps Task - Personal API
 
-This project is a simple **Personal API** built using Flask as part of the HNG DevOps Stage 1 task.
+This project is a simple Personal API built with Flask for the HNG DevOps Stage 1 task. It provides three JSON endpoints and is deployed on an AWS EC2 Ubuntu server using Gunicorn, Nginx reverse proxy, and systemd.
 
----
+## Base URLs
 
-## Base URL
+Local:
+`http://127.0.0.1:5000`
 
-- **Local:**  
-  `http://127.0.0.1:5000`
-
-- **Live:**  
-  `http://44.209.128.127`
-
----
+Live:
+`http://44.209.128.127`
 
 ## Endpoints
 
 ### `GET /`
-**Description:** Check if the API is running.
 
-**Response:**
+Returns:
+
 ```json
 {
   "message": "API is running"
 }
 ```
 
----
+Live endpoint:
+`http://44.209.128.127/`
 
 ### `GET /health`
-**Description:** Health check endpoint.
 
-**Response:**
+Returns:
+
 ```json
 {
   "message": "healthy"
 }
 ```
 
----
+Live endpoint:
+`http://44.209.128.127/health`
 
 ### `GET /me`
-**Description:** Returns personal information.
 
-**Response:**
+Returns:
+
 ```json
 {
   "name": "Damilare Idowu",
@@ -52,47 +50,50 @@ This project is a simple **Personal API** built using Flask as part of the HNG D
 }
 ```
 
----
+Live endpoint:
+`http://44.209.128.127/me`
 
 ## Run Locally
 
-### 1. Create a virtual environment
+Create a virtual environment:
+
 ```bash
 python -m venv venv
 ```
 
-### 2. Activate the virtual environment
+Activate the virtual environment on Windows Git Bash:
 
-- **Windows (Git Bash):**
 ```bash
 source venv/Scripts/activate
 ```
 
-- **Linux / macOS:**
+Activate the virtual environment on Linux or macOS:
+
 ```bash
 source venv/bin/activate
 ```
 
-### 3. Install dependencies
+Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Run the application
+Run the application:
+
 ```bash
 python app.py
 ```
 
----
+## Deployment Summary
 
-## Version Control (Git)
+The application is deployed on an AWS EC2 Ubuntu server.
 
-If you haven't initialized a repository yet:
+- The Flask app runs with Gunicorn on `127.0.0.1:5000`
+- Nginx serves as a reverse proxy on port `80`
+- systemd keeps the service running persistently
 
-```bash
-git init
-git add .
-git commit -m "Initial commit for HNG Stage 1 Personal API"
-```
+## Repository
 
----
+GitHub repository:
+`https://github.com/Dreybest/hng-stage1`
