@@ -10,7 +10,7 @@ This project is a simple **Personal API** built using Flask as part of the HNG D
   `http://127.0.0.1:5000`
 
 - **Live:**  
-  _Add your deployed API URL here_
+  `http://44.209.128.127`
 
 ---
 
