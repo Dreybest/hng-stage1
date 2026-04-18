@@ -46,7 +46,7 @@ Returns:
 {
   "name": "Damilare Idowu",
   "email": "aideedrey@gmail.com",
-  "github": "https://github.com/Dreybest"
+  "github": "https://github.com/Dreybest/hng-stage1"
 }
 ```
 
